@@ -1,0 +1,20 @@
+
+<div class="content_display">
+  <h1>Welcome to All Subs</h1>
+
+  <div class="sub-list">
+    <% @subs.each do |sub| %>
+      <div class="sub-list-item">
+        <i class="fas fa-chess-queen"></i> <a href="<%= sub_url(sub) %>"><%= sub.title %></a>
+      </div>
+    <% end %>
+  </div>
+
+  <form class="" action="<%= new_sub_url %>" method="post">
+    <input type="hidden" name="_method" value="get">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <label>
+      <input type="submit" class="button" value="New Sub">
+    </label>
+  </form>  
+</div>

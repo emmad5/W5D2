@@ -1,0 +1,48 @@
+<div class="form-container">
+  <div class="form-content">
+    <h1>Create New Post dude...cool...hey! great job...dude</h1>
+    
+    <div class="errors">
+      <% if flash.now[:errors] %>
+        <% flash.now[:errors].each do |error| %>
+          <%= error %>
+        <% end %>
+      <% end %>
+    </div>
+    
+    <form action="<%= posts_url %>" method="post">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      
+      <label>
+      Title
+      <input type="text" name="post[title]" placeholder="required">
+      </label>
+      
+      <label>
+      URL
+      
+      <input type="text" name="post[url]" placeholder="optional">
+      </label>
+      
+      <label>
+      Content
+      
+      <input type="text" name="post[content]" placeholder="optional">
+      </label>
+      
+      <label>
+      Subs
+      
+      <% Sub.all.each do |sub| %>
+        <input type="checkbox" name="post[sub_ids][]" value="<%= sub.id %>">
+        <%= sub.title %>
+        
+      <% end %>
+      </label>
+      
+      <input type="submit" value="Create New Post" class="button">
+      
+    </form>
+  </div>
+  
+</div>

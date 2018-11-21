@@ -1,0 +1,33 @@
+/* PHASE 1: Header */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+header {
+  color: white;
+  background-color: red;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+nav h1, nav ul li {
+  padding: 10px 50px 10px 50px;
+}
+nav h1 {
+  margin-left: 20px;
+}
+nav ul li {
+  padding-left: 20px;
+}
+nav h1, nav ul li {
+  border-left: 1px white solid;
+}
+nav h1, nav ul:last-child {
+  border-right: 1px white solid;
+}

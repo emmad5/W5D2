@@ -1,0 +1,29 @@
+<div class="form-container">
+  <div class="form-content">
+    <h1>Edit Sub</h1>
+    
+    <div class="errors">
+      <% if flash.now[:errors] %>
+        <% flash.now[:errors].each do |error| %>
+          <%= error %>
+        <% end %>
+      <% end %>
+    </div>
+    
+    <form action="<%= sub_url(@sub) %>" method="post">
+      <input type="hidden" name="_method" value="patch">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <label>
+      Title
+      <input type="text" name="sub[title]" value="<%= @sub.title %>">
+      </label>
+      <label>
+      Description
+      <input type="text" name="sub[description]" value="<%= @sub.description %>">
+      </label>
+      <input type="submit" value="Edit Sub" class="button">
+      
+    </form>
+  </div>
+  
+</div>

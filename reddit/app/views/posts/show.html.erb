@@ -1,0 +1,19 @@
+<div class="content_display">
+  <div class="title">
+    <%= @post.title %>
+  </div>
+  <div class="url">
+    <%= @post.url %>
+  </div>
+  <div class="author">
+    Posted by this very swell person:     
+    <%= @post.author.username %>
+  </div>
+  <div class="subs">
+    Subs: 
+    <% @post.subs.each do |sub| %>
+      <a href="<%= sub_url(sub) %>"><%= sub.title %></a>
+    <% end %>
+  </div>
+  
+</div>

@@ -1,0 +1,136 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ body {
+   background: url("https://images.unsplash.com/photo-1531756012882-a68c4e97ac98?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=787a509010aabd9971196c387e87d1df&auto=format&fit=crop&w=1187&q=80") no-repeat center center fixed;
+   color: #C90931;
+   font-family: 'Montserrat', sans-serif;
+   background-size: cover;
+   display: flex;
+   align-items: center;
+   justify-content:flex-end;
+   padding-right: 10rem;
+   
+ }
+ 
+ 
+ .form-container {
+  margin-top: 7rem;
+  background-color: rgb(40, 40, 40, 0.3);
+  border-radius: 19px;
+ }
+ 
+ .form-content h1 {
+  font-size: 2.1em;
+  color: #FF4680;
+}
+.form-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #FF1E46;
+  padding: 120px 42px;
+  border-radius: 19px;
+
+}
+
+a {
+  /* display: flex;
+  padding: 5px;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  background: #C90931;
+  border-radius: 7px;
+  font-size: 15px;
+  text-decoration: none;
+  margin: 15px; */
+}
+
+.button {
+  background: #C90931;
+  margin-top: 25px;
+  border-radius: 7px;
+  font-size: 15px;
+  border-color: black;
+}
+.sign_out {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.content_display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.content_display .title {
+  font-size: 50px;
+}
+.content_display .description {
+  font-size: 30px;
+}
+
+.form-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-content form input {
+  margin: 10px;
+}
+
+.errors {
+  color: red;
+}
+
+.sub-list {
+  display: flex;
+  flex-direction: column;
+  background: rgb(40, 40, 40, 0.3);
+  padding: 5px;
+  border: 2px black solid;
+  border-radius: 10px;
+  height: 450px;
+  overflow: scroll;
+
+}
+
+.sub-list::-webkit-scrollbar {
+    width: 0em;
+}
+ 
+.sub-list::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  outline: 0px solid transparent;
+}
+
+.sub-list-item {
+  padding: 5px;
+  font-size: 30px;
+  
+}
+
+.sub-list-item a {
+  color: #F6D7C2;
+  text-decoration: none;
+}
+ 
