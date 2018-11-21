@@ -10,15 +10,41 @@
   </head>
 
   <body>
-    <%= yield %>
     
-    <% if current_user %>
-      <form class="sign_out" action="<%= session_url %>" method="post">
-        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-        <input type="hidden" name="_method" value="delete">
-        <input type="submit" name="" value="Sign Out">
-      </form>
-      
-    <% end %>
+    <div class="header">
+      <header>
+        <nav>
+          <h1>Ruddit</h1>
+          <ul>
+            <li>
+              <% if current_user %>
+                <form action="<%= session_url %>" method="post">
+                  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                  <input type="hidden" name="_method" value="delete">
+                  <input type="submit" name="" value="Sign Out">
+                </form>
+              <% end %>
+            </li>
+            
+            <li>
+            <form class="" action="<%= subs_url %>" method="post">
+              <input type="hidden" name="_method" value="get">
+              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+              <label>
+                <input type="submit" class="button" value="All Subs">
+              </label>
+            </form>
+          </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    
+    <div class="content">
+      <%= yield %>
+    </div>
+    
+    
+    
   </body>
 </html>
